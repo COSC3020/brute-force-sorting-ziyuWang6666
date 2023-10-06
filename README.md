@@ -20,3 +20,14 @@ randomly without memory instead of systematically trying them?
 
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file.
+
+## Runtime Analysis Answer
+1. The runtime complexity of permutationSort would be n! since the recurrence relative is n(n-1)(n-2)(n-3) in the permute function to get all permutations of an input list. The sub-functions of getSortedList and allEqual take small comparisons which could be ignored as constants.
+
+2. The best case input would be to find the first list as the sorted one in all permutations. So, the best case can be $O(1)$
+
+3. The worst-case input could be the sort one finds at the end of all permutations. So, the worst case can be $O(n!)$
+
+4. Without memory generating permutation might be incomplete since there were duplicate generations. To be more specific, without memory might generate a permutation that is identical to a previously generated one. Because it does not guarantee uniqueness, and it is impossible to track the previously generated permutation. The complexity of without memory generation of permutation is much more than n!.
+
+Systematically generation will output a special order and be more reliable and efficient. People can keep track of the previous generation.
